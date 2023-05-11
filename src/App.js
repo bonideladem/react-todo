@@ -1,5 +1,7 @@
+import { Component } from 'react'
 import './App.css'
 import TodoList from './TodoList'
+import TodoItems from './TodoItems'
 class App extends Component {
   constructor() {
     super()
@@ -35,6 +37,9 @@ class App extends Component {
         inputElement={this.inputElement}
         handleInput={this.handleInput}
         currentItem={this.currentItem} 
+        />
+        <TodoItems entries={this.state.items}
+        deleteItem={this.deleteItem}
         />
       </div>
     )
